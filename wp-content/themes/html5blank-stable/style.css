@@ -1,5 +1,5 @@
 /*
-	Theme Name: HTML5 Blank
+	Theme Name: Enduro Asia
 	Theme URI: http://html5blank.com
 	Description: HTML5 Blank WordPress Theme
 	Version: 1.4.3
@@ -11,297 +11,244 @@
 	License URI: http://opensource.org/licenses/mit-license.php
 */
 
-/*------------------------------------*\
-    MAIN
-\*------------------------------------*/
 
-/* global box-sizing */
-*,
-*:after,
-*:before {
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-	-webkit-font-smoothing:antialiased;
-	font-smoothing:antialiased;
-	text-rendering:optimizeLegibility;
-}
-/* html element 62.5% font-size for REM use */
-html {
-	font-size:62.5%;
-}
-body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
-}
-/* clear */
-.clear:before,
-.clear:after {
-    content:' ';
-    display:table;
+/* Default styles */
+
+@import "../enduro/style.css";
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+.home .title {
+display:none;
 }
 
-.clear:after {
-    clear:both;
+.intro-container {
+    background: url(../images/header-home-bg.jpg) no-repeat top left #2f56a6;
+    height: 580px;
+    width: 1000px;
+    float: left;
+    padding: 30px 30px 0;
 }
-.clear {
-    *zoom:1;
-}
-img {
-	max-width:100%;
-	vertical-align:bottom;
-}
-a {
-	color:#444;
-	text-decoration:none;
-}
-a:hover {
-	color:#444;
-}
-a:focus {
-	outline:0;
-}
-a:hover,
-a:active {
-	outline:0;
-}
-input:focus {
-	outline:0;
-	border:1px solid #04A4CC;
+.intro-container p {
+  color:#fff
 }
 
-/*------------------------------------*\
-    STRUCTURE
-\*------------------------------------*/
-
-/* wrapper */
-.wrapper {
-	max-width:1280px;
-	width:95%;
-	margin:0 auto;
-	position:relative;
+.intro-container article {
+    width: 295px;
+    height: 387px;
+    float: right;
 }
-/* header */
-.header {
-
+.intro-container article span {
+  font-size: 72px;
+  color:#fff
 }
-/* logo */
-.logo {
-
-}
-.logo-img {
-
-}
-/* nav */
-.nav {
-
-}
-/* sidebar */
-.sidebar {
-
-}
-/* footer */
-.footer {
+.intro-container article .intro-title {
+  font-size: 30px;
+  color: #f7c909;
+  font-weight: bold;
+  line-height: 30px;
+  padding-top: 35px
 
 }
 
-/*------------------------------------*\
-    PAGES
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-    IMAGES
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-	TYPOGRAPHY
-\*------------------------------------*/
-
-@font-face {
-	font-family:'Font-Name';
-	src:url('fonts/font-name.eot');
-	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
-		url('fonts/font-name.woff') format('woff'),
-		url('fonts/font-name.ttf') format('truetype'),
-		url('fonts/font-name.svg#font-name') format('svg');
-    font-weight:normal;
-    font-style:normal;
+.first-line {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+}
+.second-line {
+  font-size: 14px;
+  line-height: 22px
 }
 
-/*------------------------------------*\
-    RESPONSIVE
-\*------------------------------------*/
-
-@media only screen and (min-width:320px) {
-
+.video-container a {
+    height: 105px;
+    margin-right: 10px;
+    float: left
 }
-@media only screen and (min-width:480px) {
-
-}
-@media only screen and (min-width:768px) {
-
-}
-@media only screen and (min-width:1024px) {
-
-}
-@media only screen and (min-width:1140px) {
-
-}
-@media only screen and (min-width:1280px) {
-
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
-
+.featured-links {
+    width: 100%;
+    max-width: 938px;
+    height: 100%;
+    background: #f8cb09;
+    padding: 12px 10px 10px;
+    margin: -40px auto 0;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px #071b33;
+    vertical-align: center;
 }
 
-/*------------------------------------*\
-    MISC
-\*------------------------------------*/
-
-::selection {
-	background:#04A4CC;
-	color:#FFF;
-	text-shadow:none;
-}
-::-webkit-selection {
-	background:#04A4CC;
-	color:#FFF;
-	text-shadow:none;
-}
-::-moz-selection {
-	background:#04A4CC;
-	color:#FFF;
-	text-shadow:none;
+.featured-links a {
+  float: left;
+  height: 105px;
+  margin-right: 14px
 }
 
-/*------------------------------------*\
-    WORDPRESS CORE
-\*------------------------------------*/
+.featured-links a:hover {
+  opacity: .8
+}
 
-.alignnone {
-	margin:5px 20px 20px 0;
+.featured-links a:last-child {
+  margin-right: 0
 }
-.aligncenter,
-div.aligncenter {
-	display:block;
-	margin:5px auto 5px auto;
-}
-.alignright {
-	float:right;
-	margin:5px 0 20px 20px;
-}
-.alignleft {
-	float:left;
-	margin:5px 20px 20px 0;
-}
-a img.alignright {
-	float:right;
-	margin:5px 0 20px 20px;
-}
-a img.alignnone {
-	margin:5px 20px 20px 0;
-}
-a img.alignleft {
-	float:left;
-	margin:5px 20px 20px 0;
-}
-a img.aligncenter {
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-}
-.wp-caption {
-	background:#FFF;
-	border:1px solid #F0F0F0;
-	max-width:96%;
-	padding:5px 3px 10px;
-	text-align:center;
-}
-.wp-caption.alignnone {
-	margin:5px 20px 20px 0;
-}
-.wp-caption.alignleft {
-	margin:5px 20px 20px 0;
-}
-.wp-caption.alignright {
-	margin:5px 0 20px 20px;
-}
-.wp-caption img {
-	border:0 none;
-	height:auto;
-	margin:0;
-	max-width:98.5%;
-	padding:0;
-	width:auto;
-}
-.wp-caption .wp-caption-text,
-.gallery-caption {
-	font-size:11px;
-	line-height:17px;
-	margin:0;
-	padding:0 4px 5px;
-}
-.sticky {
 
+.btn-race-results {
+    width: 341px;
+    background: url(../images/btn-race-results.png) no-repeat top left;
+    margin-left: 3px
 }
-.bypostauthor {
+.btn-rider-ranks {
+    width: 300px;
+    background: url(../images/btn-rider-ranks.png) no-repeat top left;
+}
+.btn-online-reg {
+    width: 300px;
+    background: url(../images/btn-online-reg.png ) no-repeat top left;
+}
+
+.box1 {	
+    background-image: url("http://www.enduropilipinas.com/wp-content/uploads/2015/09/btn-red-bg.png");
+     border-radius: 8px;
+       
+}
+
+.box2 {	
+    background-image: url("http://www.enduropilipinas.com/wp-content/uploads/2015/09/btn-blue-bg.png");
+    border-radius: 8px;
+       }
+
+.home-content-title {
+
+  font: italic bold 36px  'Roboto Condensed', sans-serif;
+  background: #071b33;
+   height: 58px;
+    text-align: center;
+  clear: both;
+  letter-spacing: -1px
+}
+
+.home-content-title h1 {
+  color:#fff;
+  padding-top: 10px
+}
+
+.yellow {
+    color: #f7c909
 
 }
 
-/*------------------------------------*\
-    PRINT
-\*------------------------------------*/
 
-@media print {
-	* {
-		background:transparent !important;
-		color:#000 !important;
-		box-shadow:none !important;
-		text-shadow:none !important;
+        .front{
+
+          background: white;
+          width: 100%;
+          max-width: 600px;
+          height: 370px;
+           margin-bottom: 20px;
+          float: left;
+          padding: 5px;
+          padding-left: 10px;
+           position: relative;
+           z-index: 200;
+}
+
+.front2{
+
+					background: white;
+					width: 295px;
+					max-width: 328px;
+					height: 370px;
+					float: left;
+					padding: 5px;
+          padding-left: 10px;
+				}
+
+
+.Font2 {
+  font: bold 62px  'Roboto Condensed', sans-serif;
+  background: #071b33;
+  height: 58px;
+  text-align: center;
+  clear: both;
+  letter-spacing: -1px
+
+ 
+}
+
+.Font3 {
+  font: bold 20px  'Roboto Condensed', sans-serif;
+  background: #071b33;
+  color: white;
+  padding: 20px;
+  height: 30px;
+  text-align: center;
+  clear: both;
+  letter-spacing: -1px
+
+
+}
+
+.Font4{
+  font: bold 20px  'Roboto Condensed', sans-serif;
+  background: #071b33;
+  color: #f7c909;
+  padding: 7px;
+  height: 25px;
+  text-align: center;
+  clear: both;
+  letter-spacing: 0px;
+  position: relative;
+  z-index: 200;
+}
+
+
+#comments {
+  display: none;
+}
+
+#footer{
+
+          background-image: url(http://www.enduropilipinas.com/wp-content/uploads/2015/09/header-home-bg1.jpg);
+          width: 100%;
+          max-width: 960px;
+          height: 150px;
+          float: left;
+          padding: 5px;
+          padding-left: 10px;
+}
+
+.page-title, .post .title, .page .title {
+
+	display: none;
+}
+
+.post-meta{
+	display: none;
+
 	}
-	a,
-	a:visited {
-		text-decoration:underline;
-	}
-	a[href]:after {
-		content:" (" attr(href) ")";
-	}
-	abbr[title]:after {
-		content:" (" attr(title) ")";
-	}
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content:"";
-	}
-	pre,blockquote {
-		border:1px solid #999;
-		page-break-inside:avoid;
-	}
-	thead {
-		display:table-header-group;
-	}
-	tr,img {
-		page-break-inside:avoid;
-	}
-	img {
-		max-width:100% !important;
-	}
-	@page {
-		margin:0.5cm;
-	}
-	p,
-	h2,
-	h3 {
-		orphans:3;
-		widows:3;
-	}
-	h2,
-	h3 {
-		page-break-after:avoid;
-	}
+
+.boxed {
+
+  border: 1px solid #eee ;
+  padding: 15px;
+}
+
+span.wpcf7-list-item {
+margin-left: 0.5em;
+display: block;
+}
+
+
+
+
+
+/* -- isug na kaayu si ken -- */
+@media only screen and (max-width: 980px) {
+.entry, .entry p {
+width: 100% !important;
+height: auto;
+background-size: 100% auto !important;
+}
 }
