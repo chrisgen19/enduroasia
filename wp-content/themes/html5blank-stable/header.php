@@ -38,61 +38,59 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<!-- wrapper -->
 		<div class="container-fluid wrapper col-xs-10 vertical-center">
-		<div class="">
-			<!-- header -->
+		<!-- header -->
 
-			<header class="header clear" role="banner">
+		<header class="header clear" role="banner">
+			
+			<div class="logo">
+				<a href="<?php get_template_directory_uri() ?>">
+					<img src="<?php echo get_template_directory_uri() ?>/images/p-logo.png" alt="">
+				</a>
+			</div>
+			<!-- nav -->
+			<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0px">
+
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#enduro-navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span> 
+						</button>
+						
+						<a class="navbar-brand" href="home" >
+							Enduro Asia
+						</a>
+						
+					</div>
+
+					<div class="collapse navbar-collapse" id="enduro-navbar">
+						
+						<?php 
+						$args = array(
+							'theme_location'  => 'header-menu',
+							'menu'            => '',
+							'container'       => 'div',
+							'container_class' => 'menu-{menu slug}-container',
+							'container_id'    => '',
+							'menu_class'      => 'menu',
+							'menu_id'         => '',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '<ul class="nav navbar-nav" style="margin:0px;">%3$s</ul>',
+							'depth'           => 0,
+							'walker'          => ''
+							);
+							
+						wp_nav_menu( $args ); ?>
 				
-				<div class="logo">
-					<a href="<?php get_template_directory_uri() ?>">
-						<img src="<?php echo get_template_directory_uri() ?>/images/p-logo.png" alt="">
-					</a>
-				</div>
-				<!-- nav -->
-				<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0px">
+					</div>
 
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#enduro-navbar">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span> 
-							</button>
-							
-							<a class="navbar-brand" href="home" >
-								Enduro Asia
-							</a>
-							
-						</div>
+			</nav>
+			<!-- /nav -->
 
-						<div class="collapse navbar-collapse" id="enduro-navbar">
-							
-							<?php 
-							$args = array(
-								'theme_location'  => 'header-menu',
-								'menu'            => '',
-								'container'       => 'div',
-								'container_class' => 'menu-{menu slug}-container',
-								'container_id'    => '',
-								'menu_class'      => 'menu',
-								'menu_id'         => '',
-								'echo'            => true,
-								'fallback_cb'     => 'wp_page_menu',
-								'before'          => '',
-								'after'           => '',
-								'link_before'     => '',
-								'link_after'      => '',
-								'items_wrap'      => '<ul class="nav navbar-nav" style="margin:0px;">%3$s</ul>',
-								'depth'           => 0,
-								'walker'          => ''
-								);
-								
-							wp_nav_menu( $args ); ?>
-					
-						</div>
-
-				</nav>
-				<!-- /nav -->
-
-			</header>
-		</div>
+		</header>
 		<!-- /header -->
