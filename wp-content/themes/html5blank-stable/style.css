@@ -18,7 +18,13 @@
 
 /*-------------------------------------------------------------------------------------------*/
 body{
-  background-color: #aaa;
+  // background-color: whitesmoke;
+  background-image: url('images/yellow-mountains.jpg');
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  backg
 }
 .wrapper{
   position: absolute;
@@ -26,7 +32,7 @@ body{
 
   // width: 80%;
   padding: 0px;
-  background-color: whitesmoke;
+  // background-color: #777;
   
   -webkit-transform: translate(-50%, 0);
      -moz-transform: translate(-50%, 0);
@@ -35,12 +41,24 @@ body{
           transform: translate(-50%, 0);
 }
 .header{
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
   // background: linear-gradient(#fff,#222);
+  background-image: url('images/yellow-mountains.jpg');
+  background-repeat: no-repeat;
+  background-position: -160px 0px;
+  background-size: 100vw 100vh;
 
   margin-bottom: 0px;
 }
 #enduro-navbar{
   margin: 0px;
   padding: 0px;
+}
+.home-content{
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.footer{
+
+  background-color: #777;
 }

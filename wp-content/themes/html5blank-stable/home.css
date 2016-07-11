@@ -1,3 +1,6 @@
-.infoBanner{
-	font-weight: lighter;
+body{
+	background-color: #0f0;
+}
+.slick-active{
+	// font-weight: lighter;
 }

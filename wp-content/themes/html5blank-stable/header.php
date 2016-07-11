@@ -16,6 +16,7 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<link type="css/text" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/home.css">
 		<?php wp_head(); ?>
 		<script>
         // conditionizr.com
@@ -35,7 +36,7 @@
 	<body <?php body_class(); ?>>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
 		<!-- wrapper -->
-		<div class="container-fluid wrapper col-xs-10 vertical-center">
+		<div class="container-fluid wrapper col-xs-9 vertical-center">
 		<!-- header -->
 
 		<header class="header clear" role="banner">
