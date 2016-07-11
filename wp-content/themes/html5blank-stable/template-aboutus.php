@@ -5,6 +5,7 @@
 
 	<main role="main">
 		<!-- section -->
+
 		<section>
 
 			<h1><?php the_title(); ?></h1>
@@ -19,7 +20,6 @@
 				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">
-
 				<?php edit_post_link(); ?>
 
 			</article>
