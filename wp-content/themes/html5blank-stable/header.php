@@ -36,7 +36,7 @@
 	<body <?php body_class(); ?>>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
 		<!-- wrapper -->
-		<div class="container-fluid wrapper col-xs-9 vertical-center">
+		<div class="container-fluid wrapper col-xs-9 vertical-center mainpage">
 		<!-- header -->
 
 		<header class="header clear" role="banner">

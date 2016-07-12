@@ -25,3 +25,8 @@ Add styles inside the media query below that you only want to be applied to the 
 
 	
 }
+
+.mainpage{
+	
+	width:1140px;
+}
