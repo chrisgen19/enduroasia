@@ -32,7 +32,9 @@ Add styles inside the media query below that you only want to be applied to the 
 }
 
 .custom-page{
-	    width: 100%;
-    height: 150px;
+	width: 100%;
+    min-height: 300px;
     background: #252525;
+	padding:20px;
+	color:#FFF;
 }

@@ -30,6 +30,12 @@
         	.jumbotron{
         		border:none;
         	}
+			
+			<?php if ( !is_page('home') ){ ?>
+			.home-content{
+				padding:0px;
+			}
+			<?php } ?>
         </style>
 
 	</head>
