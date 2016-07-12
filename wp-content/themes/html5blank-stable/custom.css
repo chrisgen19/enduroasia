@@ -38,3 +38,18 @@ Add styles inside the media query below that you only want to be applied to the 
 	padding:20px;
 	color:#FFF;
 }
+
+.footer-logo{
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+	justify-content:center;
+}
+
+.footer-logo .col-md-4{
+       padding: 40px 60px;
+}
+
+#logoFoot{
+	background:#FFF;
+}
