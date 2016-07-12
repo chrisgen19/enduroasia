@@ -44,6 +44,11 @@
 							echo '<li>' . get_the_content() . '</li><br><br>';
 
 							
+									  $image = rwmb_meta( 'your_prefix_image', 'type=image');
+
+										foreach ($image as $key => $value) {
+											echo '<img src="' . $image[$key]['url'] . '" />';
+										}	
 						}
 						echo '</ul>';
 						/* Restore original Post Data */
