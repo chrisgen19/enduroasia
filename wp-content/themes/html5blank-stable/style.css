@@ -55,3 +55,15 @@ body{
 
   background-color: #777;
 }
+.vc_custom_heading{
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.widget_cardoza_fb_like>h3{
+  color: whitesmoke;
+  font-weight: lighter;
+  text-align: center;
+}
+.widget_cardoza_fb_like{
+  border: none;
+}
