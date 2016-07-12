@@ -71,5 +71,47 @@ body{
   display: none;
 }
 #about_us{
-  background-color: #0f0;
+  background-color: #555;
+  padding-top: 20px;
+}
+#about-article>p, #about-article>ol{
+  margin-top: 10px;
+  margin-bottom: 5px;
+
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  text-indent: 30px;
+
+  color: whitesmoke;
+}
+#about-article{
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+#tbl_enduro-staff, #tbl_enduro-testimonials{
+  position: relative;
+  left: 50%;
+
+  padding-bottom: 40px;
+
+  -webkit-transform: translate(-50%, 0%);
+     -moz-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+       -o-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+.staff_name{
+    font-size: 40px; 
+    padding-bottom: 16px;
+    letter-spacing: 3px;
+}
+.staff_title{
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding-bottom: 24px;
+}
+.staff_desc{
+  font-size: 16px;
+  letter-spacing: 1px;
 }

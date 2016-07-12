@@ -2,61 +2,112 @@
 
 	<main role="main" id="about_us">
 		<!-- section -->
+		<div class="container-fluid">
+			<section>
 
-		<section>
+			<!-- <h1><?php the_title(); ?></h1> -->
 
-			<h1><?php the_title(); ?></h1>
+			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<!-- article -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="col-xs-12" id="about-article">
+					<h1 style='color: whitesmoke; font-size: 80px; font-weight: lighter; padding-bottom: 20px; text-align:center; letter-spacing: 3px;'>Asian Enduro Series</h1>
+						<?php the_content(); ?>
+						
+					</div>
 
-				<?php the_content(); ?>
+					<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+					<br class="clear">
+					<!-- <?php edit_post_link(); ?> -->
+					
+					<div class="col-lg-12" id="tbl_enduro-staff">
+					<h1 style='color: whitesmoke; font-size: 80px; font-weight: lighter; padding-bottom: 20px; text-align:center; letter-spacing: 3px;'>Staff</h1>
+							<table class="table table-responsive table-striped">
+								<tbody>
+									
+									<?php 
+										$ctr = 0;
+										$query = new WP_Query(array('post_type' => 'post','category_name' => 'staff'));
+										$posts = $query->get_posts();
+										// echo "<pre>";
+										// print_r($posts);
+										// echo "</pre><br><br><br>";
 
-				<br class="clear">
-				<?php edit_post_link(); ?>
-				
-				<?php 
-					$query = new WP_Query(array('post_type' => 'post','category_name' => 'staff'));
-					$posts = $query->get_posts();
-					echo "<pre>";
-					print_r($posts);
-					echo "</pre><br><br><br>";
+										// The Loop
+										if ( $query->have_posts() ) {
+											while ( $query->have_posts() ) {
+												echo ($ctr%2 == 0) ? '<tr style="font-weight: 300;">' : '<tr style="color:whitesmoke; font-weight: lighter;">';
+												$query->the_post();
+												$image = rwmb_meta( 'your_prefix_image', 'type=image&size=meduim' );
 
-					// The Loop
-					if ( $query->have_posts() ) {
-						echo '<ul>';
-						while ( $query->have_posts() ) {
-							$query->the_post();
-							$image = rwmb_meta( 'your_prefix_image', 'type=image&size=meduim' );
-							// echo $image['url'];
-							// 
-							echo "<pre>";
-							print_r($image);
-							echo "</pre><br><br>". $image ."sdf<br>";
+												$image = rwmb_meta( 'your_prefix_image', 'type=image');
 
-							// echo "<a href='{" . $image['261']['full_url'] . "}' rel='lightbox'><img src='{" . $image['url'] . "}' width='{" . $image['width'] . "}' height='{" . $image['height'] . "}' alt='{" . $image['alt'] . "}' /></a>";
-							echo rwmb_meta( 'your_prefix_jobdesc', $args = array(), $post_id = get_the_id()) . ' of ' . rwmb_meta( 'your_prefix_company', $args = array(), $post_id = get_the_id());
-							echo '<li>' . get_the_title() . '</li>';
-							echo '<li>' . get_the_content() . '</li><br><br>';
+													foreach ($image as $key => $value) {
+													echo '<td><img src="' . $image[$key]['full_url'] . '" width="100%"/></td>';
+												}	
+												
+												
+												echo '<td style="padding:30px;"><p class="staff_name">'. get_the_title() . '</p>';
+												echo '<p class="staff_title">' . rwmb_meta( 'your_prefix_jobdesc', $args = array(), $post_id = get_the_id()) . '</p>';
+												echo '<article class="staff_desc">'.  get_the_content() . '</article></td>';
+												echo '</tr>';
+												$ctr++;
+											}
 
-							
-									  $image = rwmb_meta( 'your_prefix_image', 'type=image');
+											/* Restore original Post Data */
+											wp_reset_postdata();
 
-										foreach ($image as $key => $value) {
-											echo '<img src="' . $image[$key]['url'] . '" />';
-										}	
-						}
-						echo '</ul>';
-						/* Restore original Post Data */
-						wp_reset_postdata();
-					} else {
-						// no posts found
-					}
-				 ?>
+										} else {
+											// no posts found
+										}
+									 ?>
+								</tbody>
+						</table>
+					</div>
+
+					<div class="col-lg-9" id="tbl_enduro-testimonials" style="color: whitesmoke;  text-align:center;">
+					<label style='color: whitesmoke; font-size:36px; font-weight: lighter; letter-spacing: 3px;'>Testimonials</label>
+						
+						<table class="table table-responsive">
+							<tbody>
+								
+								 <?php 
+
+									$query = new WP_Query(array('post_type' => 'post','category_name' => 'testimonials'));
+									$posts = $query->get_posts();
+
+									// echo "<pre>";
+									// print_r($posts);
+									// echo "</pre><br><br><br>";
+
+									while ( $query->have_posts() ) {
+										echo "<tr style='border-top-style:none;'>";
+											$query->the_post();
+											$image = rwmb_meta( 'your_prefix_image', 'type=image&size=meduim' );
+											
+											echo '<br><br><td style="text-align: right;"><article>' . get_the_content() . '</article>';
+											echo rwmb_meta( 'your_prefix_jobdesc', $args = array(), $post_id = get_the_id());
+											echo get_the_title() . '</article></td>';
+
+											$image = rwmb_meta( 'your_prefix_image', 'type=image');
+
+												foreach ($image as $key => $value) {
+												echo '<td class="col-md-2"><img src="' . $image[$key]['full_url'] . '" height="100" style="border-radius:50%;"/></td>';
+											}	
+											
+										echo '</tr>';
+										}
+										/* Restore original Post Data */
+
+									wp_reset_postdata();
+								  ?>
+						</tbody>
+					</table>
+					</div>
+				</div>
 			</article>
 			<!-- /article -->
 
