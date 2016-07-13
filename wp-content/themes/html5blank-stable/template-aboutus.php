@@ -68,7 +68,7 @@
 						</table>
 					</div>
 
-					<div class="col-lg-9" id="tbl_enduro-testimonials" style="color: whitesmoke;  text-align:center;">
+					<div class="col-lg-10" id="tbl_enduro-testimonials" style="color: whitesmoke;  text-align:center;">
 					<label style='color: whitesmoke; font-size:36px; font-weight: lighter; letter-spacing: 3px;'>Testimonials</label>
 						
 						<table class="table table-responsive">
@@ -88,14 +88,14 @@
 											$query->the_post();
 											$image = rwmb_meta( 'your_prefix_image', 'type=image&size=meduim' );
 											
-											echo '<br><br><td style="text-align: right;"><article class="testimonials-post">' . get_the_content() . '</article>';
+											echo '<br><br><td style="text-align: right;padding:30px;"><article class="testimonials-post">' . get_the_content() . '</article>';
 											echo '<p class="testimonials-author_name">' . rwmb_meta( 'your_prefix_jobdesc', $args = array(), $post_id = get_the_id()) . ' of ' . rwmb_meta( 'your_prefix_company', $args = array(), $post_id = get_the_id()) . '</p>';
 											echo '<p class="testimonials-author_title">' . get_the_title() . '</p></article></td>';
 
 											$image = rwmb_meta( 'your_prefix_image', 'type=image');
 
 												foreach ($image as $key => $value) {
-												echo '<td class="col-md-2"><img src="' . $image[$key]['full_url'] . '" height="100" style="border-radius:50%;background-color: #fff;"/></td>';
+												echo '<td class="col-md-3"><img src="' . $image[$key]['full_url'] . '" height="100%" style="border-radius:50%;background-color: #fff;"/></td>';
 											}	
 											
 										echo '</tr>';

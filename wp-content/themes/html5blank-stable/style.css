@@ -64,9 +64,6 @@ body{
   font-weight: lighter;
   text-align: center;
 }
-.widget_cardoza_fb_like{
-  border: none;
-}
 .display_none{
   display: none;
 }
@@ -114,4 +111,9 @@ body{
 .staff_desc{
   font-size: 16px;
   letter-spacing: 1px;
+}
+.testimonials-post{
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 16px;
 }
