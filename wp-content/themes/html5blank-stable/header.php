@@ -5,7 +5,6 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
 
@@ -17,6 +16,7 @@
 
 		<link type="css/text" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/home.css">
+		<link rel="shortcut icon" type="image/png" href="<?php echo get_site_url() ?>/wp-content/themes/html5blank-stable/images/p-logo.png">
 		<?php wp_head(); ?>
 		<script>
         // conditionizr.com
