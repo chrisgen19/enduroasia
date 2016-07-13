@@ -62,7 +62,6 @@ body{
 .widget_cardoza_fb_like>h3{
   color: whitesmoke;
   font-weight: lighter;
-  text-align: center;
 }
 .display_none{
   display: none;
@@ -85,6 +84,12 @@ body{
 #about-article{
   padding-top: 50px;
   padding-bottom: 80px;
+}
+.article-aboutUs{
+  font-weight: lighter;
+  letter-spacing: 2px;
+
+  font-size: 15px;
 }
 #tbl_enduro-staff, #tbl_enduro-testimonials{
   position: relative;
