@@ -88,14 +88,14 @@
 											$query->the_post();
 											$image = rwmb_meta( 'your_prefix_image', 'type=image&size=meduim' );
 											
-											echo '<br><br><td style="text-align: right;"><article>' . get_the_content() . '</article>';
-											echo rwmb_meta( 'your_prefix_jobdesc', $args = array(), $post_id = get_the_id());
-											echo get_the_title() . '</article></td>';
+											echo '<br><br><td style="text-align: right;"><article class="testimonials-post">' . get_the_content() . '</article>';
+											echo '<p class="testimonials-author_name">' . rwmb_meta( 'your_prefix_jobdesc', $args = array(), $post_id = get_the_id()) . ' of ' . rwmb_meta( 'your_prefix_company', $args = array(), $post_id = get_the_id()) . '</p>';
+											echo '<p class="testimonials-author_title">' . get_the_title() . '</p></article></td>';
 
 											$image = rwmb_meta( 'your_prefix_image', 'type=image');
 
 												foreach ($image as $key => $value) {
-												echo '<td class="col-md-2"><img src="' . $image[$key]['full_url'] . '" height="100" style="border-radius:50%;"/></td>';
+												echo '<td class="col-md-2"><img src="' . $image[$key]['full_url'] . '" height="100" style="border-radius:50%;background-color: #fff;"/></td>';
 											}	
 											
 										echo '</tr>';
