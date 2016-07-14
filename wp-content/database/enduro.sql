@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Jul 13, 2016 at 09:36 PM
+-- Generation Time: Jul 14, 2016 at 06:01 AM
 -- Server version: 5.5.38
 -- PHP Version: 5.6.2
 
@@ -112,7 +112,7 @@ CREATE TABLE `wp_options` (
   `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB AUTO_INCREMENT=446 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=447 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Truncate table before insert `wp_options`
@@ -284,7 +284,8 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (426, '_transient_dash_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><p><strong>RSS Error</strong>: WP HTTP Error: Couldn''t resolve host ''wordpress.org''</p></div><div class="rss-widget"><p><strong>RSS Error</strong>: WP HTTP Error: Couldn''t resolve host ''planet.wordpress.org''</p></div><div class="rss-widget"><ul></ul></div>', 'no'),
 (433, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1468425305;s:8:"response";a:1:{s:27:"js_composer/js_composer.php";O:8:"stdClass":5:{s:4:"slug";s:11:"js_composer";s:11:"new_version";s:4:"4.12";s:3:"url";s:0:"";s:7:"package";b:0;s:4:"name";s:24:"WPBakery Visual Composer";}}s:12:"translations";a:0:{}s:9:"no_update";a:4:{s:36:"contact-form-7/wp-contact-form-7.php";O:8:"stdClass":6:{s:2:"id";s:3:"790";s:4:"slug";s:14:"contact-form-7";s:6:"plugin";s:36:"contact-form-7/wp-contact-form-7.php";s:11:"new_version";s:5:"4.4.2";s:3:"url";s:45:"https://wordpress.org/plugins/contact-form-7/";s:7:"package";s:63:"https://downloads.wordpress.org/plugin/contact-form-7.4.4.2.zip";}s:55:"cardoza-facebook-like-box/cardoza_facebook_like_box.php";O:8:"stdClass":6:{s:2:"id";s:5:"27408";s:4:"slug";s:25:"cardoza-facebook-like-box";s:6:"plugin";s:55:"cardoza-facebook-like-box/cardoza_facebook_like_box.php";s:11:"new_version";s:5:"2.8.6";s:3:"url";s:56:"https://wordpress.org/plugins/cardoza-facebook-like-box/";s:7:"package";s:68:"https://downloads.wordpress.org/plugin/cardoza-facebook-like-box.zip";}s:21:"meta-box/meta-box.php";O:8:"stdClass":6:{s:2:"id";s:5:"26827";s:4:"slug";s:8:"meta-box";s:6:"plugin";s:21:"meta-box/meta-box.php";s:11:"new_version";s:5:"4.8.7";s:3:"url";s:39:"https://wordpress.org/plugins/meta-box/";s:7:"package";s:57:"https://downloads.wordpress.org/plugin/meta-box.4.8.7.zip";}s:23:"bootstrap/bootstrap.php";O:8:"stdClass":6:{s:2:"id";s:5:"25210";s:4:"slug";s:9:"bootstrap";s:6:"plugin";s:23:"bootstrap/bootstrap.php";s:11:"new_version";s:5:"0.3.1";s:3:"url";s:40:"https://wordpress.org/plugins/bootstrap/";s:7:"package";s:52:"https://downloads.wordpress.org/plugin/bootstrap.zip";}}}', 'yes'),
 (444, '_site_transient_timeout_theme_roots', '1468438497', 'yes'),
-(445, '_site_transient_theme_roots', 'a:5:{s:6:"enduro";s:7:"/themes";s:17:"html5blank-stable";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes');
+(445, '_site_transient_theme_roots', 'a:5:{s:6:"enduro";s:7:"/themes";s:17:"html5blank-stable";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'yes'),
+(446, '_transient_doing_cron', '1468467879.5835480690002441406250', 'yes');
 
 -- --------------------------------------------------------
 
@@ -1393,7 +1394,7 @@ MODIFY `link_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=446;
+MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=447;
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
